@@ -1,4 +1,5 @@
 import "./OfferDetail.css"
+import { Header } from "./components/Header";
 import HorizontalBar from "./components/HorizontalBar";
 
 function convertDateRangeFormat(fromDate: string, tillDate: string): string {
@@ -48,7 +49,9 @@ export function OfferDetail() {
 
     return (
         <>
+            
             <div className="container">
+                <Header />
                 <div className="card">
 
 

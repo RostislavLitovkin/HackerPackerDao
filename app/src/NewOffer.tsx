@@ -3,6 +3,7 @@ import { Connect } from "./components/Connect";
 
 import "./NewOffer.css"
 import { useAccount } from "wagmi";
+import { Header } from "./components/Header";
 
 interface FormValues {
     title: string;
@@ -16,7 +17,7 @@ interface FormValues {
 
 export function NewOffer() {
 
-    const { connector, isConnected } = useAccount()
+    const { isConnected } = useAccount()
 
     const [values, setValues] = useState<FormValues>({
         title: '',
@@ -39,14 +40,14 @@ export function NewOffer() {
 
     return (
         <>
+            
             <div className="container">
+                <Header />
                 <form className="form" onSubmit={handleSubmit}>
-                    <Connect />
-                    <h1>Hacker Packer Dao</h1>
-
-                    {isConnected ?
+                    <div style={{ fontWeight: 900 }}>Offer / Ask</div>
+                     {isConnected ?
                         <>
-                            <div style={{ fontWeight: 900 }}>Offer / Ask</div>
+                            
                             <br />
                             <input
                                 className="input"

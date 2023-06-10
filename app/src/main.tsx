@@ -32,7 +32,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <WagmiConfig config={config}>
+      <div style={{backgroundColor: "#3F3F3F", width: "100vw", height: "100vh", overflow: "scroll" }}>
         <RouterProvider router={router} />
+      </div>
     
     </WagmiConfig>
   </React.StrictMode>,
