@@ -13,5 +13,4 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: "/HackerPackerDao/"
 })
