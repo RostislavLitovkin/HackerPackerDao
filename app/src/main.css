@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 button {
     color: white;
     background-color: rgba(241, 95, 168, 0.503);
