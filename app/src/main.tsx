@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom/client'
 import { WagmiConfig } from 'wagmi'
 
 import { App } from './App'
+import { Dashboard } from './Dashboard'
 import { config } from './wagmi'
 
 import {

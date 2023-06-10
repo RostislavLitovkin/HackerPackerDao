@@ -17,6 +17,7 @@ import { WatchContractEvents } from './components/WatchContractEvents'
 import { WatchPendingTransactions } from './components/WatchPendingTransactions'
 import { WriteContract } from './components/WriteContract'
 import { WriteContractPrepared } from './components/WriteContractPrepared'
+import { OfferItem } from './components/OfferItem'
 
 export function App() {
   const { isConnected } = useAccount()

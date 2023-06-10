@@ -3,10 +3,15 @@ import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import "./Connect.css"
 
 export function Connect() {
-  const { connector, isConnected } = useAccount()
-  const { connect, connectors, error, isLoading, pendingConnector } =
-    useConnect()
-  const { disconnect } = useDisconnect()
+    const {connector, isConnected} = useAccount()
+    const {
+        connect,
+        connectors,
+        error,
+        isLoading,
+        pendingConnector
+    } = useConnect()
+    const {disconnect} = useDisconnect()
 
   return (
     <div style={{marginLeft: "Auto",}}>
@@ -28,7 +33,10 @@ export function Connect() {
           ))}
       </div>
 
-      {error && <div>{(error as BaseError).shortMessage}</div>}
-    </div>
-  )
+            {
+            error && <div>{
+                (error as BaseError).shortMessage
+            }</div>
+        } </div>
+    )
 }
