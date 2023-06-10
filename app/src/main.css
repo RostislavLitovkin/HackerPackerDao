@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    color: black;
+    background-color: rgb(100, 255, 214);
+    border-color: rgb(100, 255, 214);
+    padding: "20px";
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px;
+    font-weight: 900;
+}

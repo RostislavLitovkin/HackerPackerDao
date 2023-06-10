@@ -1,0 +1,36 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3F3F3F;
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.asker-offerer-comment-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.comment {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.agree-button {
+    margin-left: 10px;
+    margin-right: 10px;
+}

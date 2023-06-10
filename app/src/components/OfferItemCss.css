@@ -1,0 +1,32 @@
+.OfferItem {
+    display: block;
+    color: #f2f2f2;
+}
+
+/* Container for flexboxes */
+  .row {
+    display: -webkit-flex;
+    display: flex;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+  }
+
+  
+  /* Left and right column */
+  .column-side {
+    padding: 0px 30px;
+    
+     -webkit-flex: 1;
+     -ms-flex: 1;
+     flex: 1;
+  }
+  
+  /* Middle column */
+  .column-middle {
+    padding: 0px 10px;
+    
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+  }
