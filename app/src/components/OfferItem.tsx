@@ -11,14 +11,10 @@ export function OfferItem() {
     const year = '2023'
     const location = 'Prague, Czechia'
     const description = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Vivamus ac leo pretium faucibus. Quisque tincidunt scelerisque libero. In enim a arcu imperdiet malesuada. In convallis. Praesent id justo in neque elementum ultrices. In convallis. Duis viverra diam non justo. Nulla non arcu lacinia neque faucibus fringilla.'
-    const wallet = 'Wallet Address: '
     const walletAddress = '0x34598234bkjj34592u34bivefu9ufvasdu9v'
-    const twitter = 'Twitter: '
     const twitterAddress = undefined
     const stakeAmount = '1'
     const stakeCrypto = 'ETH'
-    const trustAmount = '180'
-    const trust = 'TRUST'
 
     const navigate = useNavigate()
     return(
@@ -32,7 +28,7 @@ export function OfferItem() {
                     <div className="column-middle">   
                     <h2><b>{title}</b></h2> 
                     <p>{description}</p>
-                    <p>{wallet}{walletAddress}</p>
+                    {walletAddress && <p>Wallet: {walletAddress}</p>}
                     {twitterAddress && <p>Twitter: {twitterAddress}</p>}
                     </div>
                     <div className="column-side">
