@@ -1,5 +1,6 @@
 import { BaseError } from 'viem'
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import "./Connect.css"
 
 export function Connect() {
   const { connector, isConnected } = useAccount()
@@ -8,10 +9,10 @@ export function Connect() {
   const { disconnect } = useDisconnect()
 
   return (
-    <div>
+    <div style={{marginLeft: "Auto",}}>
       <div>
         {isConnected && (
-          <button onClick={() => disconnect()}>
+          <button onClick={() => disconnect()} className='connect-button'>
             Disconnect from {connector?.name}
           </button>
         )}
@@ -19,7 +20,8 @@ export function Connect() {
         {connectors
           .filter((x) => x.ready && x.id !== connector?.id)
           .map((x) => (
-            <button key={x.id} onClick={() => connect({ connector: x })}>
+            <button key={x.id} onClick={() => connect({ connector: x })}
+            className='connect-button'>
               {x.name}
               {isLoading && x.id === pendingConnector?.id && ' (connecting)'}
             </button>
