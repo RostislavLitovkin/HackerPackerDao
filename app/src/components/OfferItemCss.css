@@ -9,13 +9,13 @@
     display: flex;
     border-radius: 10px;
     border: none;
-    background-color: bisque;
+    background-color: white;
   }
 
   
   /* Left and right column */
   .column-side {
-    padding: 10px;
+    padding: 30px;
     
      -webkit-flex: 1;
      -ms-flex: 1;
