@@ -1,10 +1,8 @@
 .connect-button {
-    color: white;
-    background-color: rgba(241, 95, 168, 0.503);
-    border-color: rgb(241, 95, 168);
     padding: "20px";
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     width: 200px;
     padding: 10px;
+    height: 60px;
 }

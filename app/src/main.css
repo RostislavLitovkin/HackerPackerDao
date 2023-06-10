@@ -3,12 +3,13 @@ body {
 }
 
 button {
-    color: white;
-    background-color: rgba(241, 95, 168, 0.503);
-    border-color: rgb(241, 95, 168);
+    color: black;
+    background-color: rgb(100, 255, 214);
+    border-color: rgb(100, 255, 214);
     padding: "20px";
     border: none;
     border-radius: 5px;
     width: 200px;
     padding: 10px;
+    font-weight: 900;
 }

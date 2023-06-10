@@ -41,12 +41,8 @@ export function OfferDetail() {
 
 
     const offerersstake = 3.0;
-    const offererstrust = 180;
 
     const askersstake = 1.0;
-    const askerstrust = 450;
-
-    const yourvotingpower = 6000;
 
 
 
@@ -87,7 +83,6 @@ export function OfferDetail() {
                             <b>
                                 <div>Stake:</div>
                                 <div>{askersstake} ETH</div>
-                                <div>{askerstrust} Trust</div>
                             </b>
                         </div>
                         <div className="comment">
@@ -99,7 +94,6 @@ export function OfferDetail() {
                             <b>
                                 <div>Stake:</div>
                                 <div>{offerersstake} ETH</div>
-                                <div>{offererstrust} Trust</div>
                             </b>
 
                         </div>
@@ -110,11 +104,10 @@ export function OfferDetail() {
                     <br></br>
                     <div style={{display: "flex", marginLeft: "30px", marginRight: "30px"}}>
                         <button className="agree-button">Agree</button>
-                        <HorizontalBar value1={askersstake * askerstrust} value2={offerersstake * offererstrust} />
+                        <HorizontalBar value1={askersstake} value2={offerersstake} />
                         <button className="agree-button">Disagree</button>
                     </div>
                     
-                    <div style={{marginLeft: "40px", marginTop: "10px"}}><b>Your voting power: {yourvotingpower}</b></div>
                     <br></br>
                 </div>
             </div>

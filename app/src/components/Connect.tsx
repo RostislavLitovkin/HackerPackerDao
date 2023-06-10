@@ -14,7 +14,7 @@ export function Connect() {
     const {disconnect} = useDisconnect()
 
   return (
-    <div style={{marginLeft: "Auto",}}>
+    <div style={{marginLeft: "Auto", height: "60px" }}>
       <div>
         {isConnected && (
           <button onClick={() => disconnect()} className='connect-button'>

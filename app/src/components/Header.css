@@ -1,0 +1,20 @@
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 10%;
+    right: 10%;
+    background-color: #333a;
+    border-color: #ffffff33;
+    border-radius: 30px;
+    height: 60px;
+    width: 85vw;
+    max-width: 1200px;
+    border-style: solid;
+    margin-top: 10px;
+    display: flex;
+    color: white;
+    backdrop-filter: blur(5px);
+    margin: auto;
+    
+    justify-content: space-between;
+}
