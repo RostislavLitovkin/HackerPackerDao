@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import './OfferItemCss.css'
 
 export function OfferItem() {
@@ -13,12 +14,13 @@ export function OfferItem() {
     const wallet = 'Wallet Address: '
     const walletAddress = '0x34598234bkjj34592u34bivefu9ufvasdu9v'
     const twitter = 'Twitter: '
-    const twitterAddress = 'https://twitter.com/elonmusk?lang=cs'
+    const twitterAddress = undefined
     const stakeAmount = '1'
     const stakeCrypto = 'ETH'
     const trustAmount = '180'
     const trust = 'TRUST'
 
+    const navigate = useNavigate()
     return(
         <div>
             <div className="row">
@@ -31,13 +33,13 @@ export function OfferItem() {
                     <h2><b>{title}</b></h2> 
                     <p>{description}</p>
                     <p>{wallet}{walletAddress}</p>
-                    <p>{twitter}{twitterAddress}</p>
+                    {twitterAddress && <p>Twitter: {twitterAddress}</p>}
                     </div>
                     <div className="column-side">
                     <h2><b>Stake:</b></h2> 
                     <h2><b>{stakeAmount} {stakeCrypto}</b></h2> 
-                    <h2><b>{trustAmount} {trust}</b></h2> 
-                    <h2><button>Add Trust</button></h2> 
+                    <h2><button onClick={() => navigate("/offerdetail")}>Show more</button></h2> 
+                    <h2><button>Add Stake</button></h2> 
                     <h2><button>Accept</button></h2>
                     </div>
                 
