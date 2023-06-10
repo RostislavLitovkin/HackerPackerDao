@@ -1,0 +1,21 @@
+.dashboard {
+    margin: 40px;
+}
+
+.buttonsList{
+    display: inline-block;
+    margin: 0px 40px;
+}
+
+button{
+  display: inline-block;
+  margin: 0px 0px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color:pink;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
