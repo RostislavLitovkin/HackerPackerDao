@@ -10,6 +10,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { NewOffer } from './NewOffer'
+import { OfferDetail } from './OfferDetail'
+import "./main.css"
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/newoffer",
     element: <NewOffer />
+  },
+  {
+    path: "/offerdetail",
+    element: <OfferDetail />
   },
 ]);
 
