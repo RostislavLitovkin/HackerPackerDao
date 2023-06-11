@@ -19,7 +19,7 @@ function dashboardEscrow(index: number) {
     address: '0x826b3A6F625da5CF904D9E8cCf8817AB89d4899a',
     abi: abi,
     functionName: 'escrows',
-    args: [0]
+    args: [index]
   })
 
   console.log("Fetching")
@@ -33,11 +33,9 @@ export function Dashboard() {
   console.log(length)
 
   let d: any[] = []
-  /*for (var i = 0; i < length; i++) {
+  for (var i = 0; i < length; i++) {
     d.push(dashboardEscrow(i))
-  }*/
-
-  d.push(dashboardEscrow(0))
+  }
 
   console.log(d)
 

@@ -53,7 +53,7 @@ export function NewOffer() {
         address: '0x826b3A6F625da5CF904D9E8cCf8817AB89d4899a',
         abi,
         chainId: 137,
-        args: [1000, 1, 1696466851, encodeAbiParameters(
+        args: [values.stake, 1, 1696466851, encodeAbiParameters(
             [
               { name: 'dateFrom', type: 'uint256' },
               { name: 'dateTo', type: 'uint256' },
