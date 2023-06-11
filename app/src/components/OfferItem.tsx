@@ -9,7 +9,12 @@ export function OfferItem(props: Props) {
 
     const { data } = props
 
-    const event =  data[8].eventName
+    if (!data) {
+        return <></>
+    }
+
+    console.log("Data: " + data)
+    const event = data[8].eventName
     const title =  data[8].title
     const dayFrom = '9'
     const dayTo = '11'
