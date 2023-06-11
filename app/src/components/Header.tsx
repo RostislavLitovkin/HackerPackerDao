@@ -17,6 +17,9 @@ export function Header() {
                 <h1 style={{ marginLeft: "30px", cursor: "pointer" }}
                     className="new-request-button"
                     onClick={() => {navigate("/newoffer")}}>New request</h1>
+                <h1 style={{ marginLeft: "30px", cursor: "pointer" }}
+                    className="new-request-button"
+                    onClick={() => {navigate("/offerdetail")}}>Disputes</h1>
                 <Connect />
             </nav>
 
