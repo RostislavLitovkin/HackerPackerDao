@@ -33,8 +33,7 @@ export function OfferItem() {
                     </div>
                     <div className="column-side">
                     <h2><b>Stake:</b></h2> 
-                    <h2><b>{stakeAmount} {stakeCrypto}</b></h2> 
-                    <h2><button onClick={() => navigate("/offerdetail")}>Show more</button></h2> 
+                    <h2><b>{stakeAmount} {stakeCrypto}</b></h2>
                     <h2><button>Add Stake</button></h2> 
                     <h2><button>Accept</button></h2>
                     </div>
