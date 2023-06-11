@@ -48,36 +48,22 @@ export function NewOffer() {
         stake: 0,
     });
 
-    const encodedData1 = encodeAbiParameters(
-        [
-            { name: '_hostDeposit', type: 'uint256' },
-        ],
-        [0n]
-    )
-    const encodedData2 = encodeAbiParameters(
-        [
-            { name: '_guestDeposit', type: 'uint256' },
-        ],
-        [420n]
-    )
-    const encodedData3 = encodeAbiParameters(
-        [
-            { name: '_escrowEndTimestamp', type: 'uint256' },
-            
-        ],
-        [1696466851n]
-    )
-    const encodedData4 = encodeAbiParameters(
-        [
-            { name: "_metadata", type: "bytes" }
-        ],
-        ["0x"]
-    )
+
     const { config } = usePrepareContractWrite({
         address: '0x826b3A6F625da5CF904D9E8cCf8817AB89d4899a',
         abi,
         chainId: 137,
-        args: [encodedData1, encodedData2, encodedData3, encodedData4],
+        args: [1000, 1, 1696466851, encodeAbiParameters(
+            [
+              { name: 'dateFrom', type: 'uint256' },
+              { name: 'dateTo', type: 'uint256' },
+              { name: 'title', type: 'string' },
+              { name: 'eventName', type: 'string' },
+              { name: 'description', type: 'string' },
+              { name: 'location', type: 'string' }
+            ],
+            [1696466851, 1696466851, values.title, values.event, values.description, values.location]
+          )],
         functionName: 'createEscrow',
     })
 
