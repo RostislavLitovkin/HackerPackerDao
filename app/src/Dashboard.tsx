@@ -14,9 +14,24 @@ function dashboardLength() {
   return data
 }
 
+function dashboardEscrow() {
+  const { data, isError, isLoading } = useContractRead({
+    address: '0x826b3A6F625da5CF904D9E8cCf8817AB89d4899a',
+    abi: abi,
+    functionName: 'escrows', 
+    args: [0]
+  })
+
+  return data
+}
+
 export function Dashboard() {
 
-  console.log(dashboardLength())
+  const length = parseInt(dashboardLength() + "")
+
+  for (var i = 0; i < length; i++) {
+    
+  }
 
   return (
     <>
@@ -30,16 +45,13 @@ export function Dashboard() {
 
     
 
-
-      <div className='dashboard'>
-        <OfferItem />
-      </div>
-      <div className='dashboard'>
-        <OfferItem />
-      </div>
-      <div className='dashboard'>
-        <OfferItem />
-      </div>
+    {
+       {
+        <div className='dashboard'>
+          <OfferItem data={dashboardEscrow()} />
+        </div>
+      }
+}
 
     </>
   )
