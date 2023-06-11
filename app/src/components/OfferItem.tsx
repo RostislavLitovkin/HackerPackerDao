@@ -1,19 +1,30 @@
 import { useNavigate } from 'react-router-dom'
 import './OfferItemCss.css'
 
-export function OfferItem() {
+interface Props {
+    data: any[]
+}
 
-    const event = 'ETHPrague'
-    const title = 'Highshool student looking for a place to stay'
+export function OfferItem(props: Props) {
+
+    const { data } = props
+
+    if (!data) {
+        return <></>
+    }
+
+    console.log("Data: " + data)
+    const event = data[8].eventName
+    const title =  data[8].title
     const dayFrom = '9'
     const dayTo = '11'
     const month = 'June'
     const year = '2023'
-    const location = 'Prague, Czechia'
-    const description = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla non arcu lacinia neque faucibus fringilla. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Vivamus ac leo pretium faucibus. Quisque tincidunt scelerisque libero. In enim a arcu imperdiet malesuada. In convallis. Praesent id justo in neque elementum ultrices. In convallis. Duis viverra diam non justo. Nulla non arcu lacinia neque faucibus fringilla.'
-    const walletAddress = '0x34598234bkjj34592u34bivefu9ufvasdu9v'
+    const location = data[8].location
+    const description =  data[8].description
+    const walletAddress = data[0]
     const twitterAddress = undefined
-    const stakeAmount = '1'
+    const stakeAmount = parseInt(data[2])
     const stakeCrypto = 'ETH'
 
     const navigate = useNavigate()
